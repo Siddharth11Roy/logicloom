@@ -4,11 +4,11 @@ import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load the saved model
-with open('logistic_regression_model.pkl', 'rb') as model_file:
+with open('logistic_regression_model (1).pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 # Load the TF-IDF vectorizer
-with open('tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
+with open('tfidf_vectorizer (1).pkl', 'rb') as vectorizer_file:
     vectorizer = pickle.load(vectorizer_file)
 
 def preprocess_text(text):
@@ -37,7 +37,7 @@ def main():
         # Make prediction
         prediction = predict_article_type(user_input)
         article_type = "AI-generated" if prediction == 1 else "Human-written"
-        st.write(f"Predicted Article Type: {article_type}")
+        st.write(f"Predicted Article Type: {Type}")
 
 if __name__ == "__main__":
     main()
