@@ -37,7 +37,7 @@ def main():
         # Make prediction
         prediction = predict_article_type(user_input)
         article_type = "AI-generated" if prediction == 1 else "Human-written"
-        st.write(f"Predicted Article Type: {Type}")
+        st.write(f"Predicted Article Type: {article_type}")
 
 if __name__ == "__main__":
     main()
